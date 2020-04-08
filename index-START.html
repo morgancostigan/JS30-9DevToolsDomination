@@ -15,7 +15,7 @@
   <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
   <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }, { name: 'cupcake', age: 10 }];
     const age = 51;
 
     function makeGreen() {
@@ -58,10 +58,43 @@
     console.dir(p); //will show you all the attributes of the element
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`); //group will appear open, group collapsed will appear collapsed
+      console.log(`This is ${dog.name}.`);
+      console.log(`${dog.name} is ${dog.age} years old, that's ${dog.age * 7} in dog years!`);
+      console.log(`Boy do we think ${dog.name} is swell!`);
+      console.groupEnd(`${dog.name}`);//needed to bookend with group or groupCollapsed
+    })//end dogs.forEach
 
     // counting
+    console.count('Awesome!');
+    console.count('Sweet!');
+    console.count('Awesome!');
+    console.count('Sweet!');
+    console.count('Awesome!');
+    console.count('Awesome!');
+    console.count('Awesome!');
+    console.count('Sweet!'); 
+    console.count('Sweet!'); 
+    console.count('Sweet!');
+    console.count('Awesome!');
+    console.count('Awesome!');
+    console.count('Awesome!');
 
     // timing
+     console.time('fetching data');
+     fetch('https://api.github.com/users/morgancostigan')
+     .then(data => data.json())
+     .then(data => {
+       console.timeEnd('fetching data');
+       console.log(data);
+     })//end fetch
+
+
+    //nonsense
+    console.log(dogs);
+    console.table(dogs);
+    
 
   </script>
 </body>
