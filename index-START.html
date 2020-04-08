@@ -6,6 +6,12 @@
 </head>
 <body>
 
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/gh/evertdespiegeleer/console.info/consoleInfo.min.js">
+    // this is needed to loosely emulate the console.info icon
+  </script>
+    
+
   <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
   <script>
@@ -37,8 +43,11 @@
     console.error('You really pooped the bed on this one, eh?');
 
     // Info
+    console.info('A group of kittens is called a `kindle`.');
+        //removed in most browsers, patched at the top with a plugin
 
     // Testing
+    console.assert(1 === 3, 'that`s not right ya dummy!');
 
     // clearing
 
