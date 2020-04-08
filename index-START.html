@@ -10,6 +10,7 @@
 
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    const age = 51;
 
     function makeGreen() {
       const p = document.querySelector('p');
@@ -18,9 +19,12 @@
     }
 
     // Regular
-
+    console.log('Kia Ora');
+    
     // Interpolated
-
+    console.log('Kia ora, I`m not like other teenagers, I`m %s!', '51');
+    console.log(`Kia ora, I'm ${age}!`);
+    
     // Styled
 
     // warning!
