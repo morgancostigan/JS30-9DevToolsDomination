@@ -44,14 +44,18 @@
 
     // Info
     console.info('A group of kittens is called a `kindle`.');
-        //removed in most browsers, patched at the top with a plugin
+        //removed in most browsers, patched at the top with a plugin from https://github.com/evertdespiegeleer/console.info
 
     // Testing
     console.assert(1 === 3, 'that`s not right ya dummy!');
 
     // clearing
+    // console.clear(); //this will clear all previous console entries
 
     // Viewing DOM Elements
+    const p = document.querySelector('p'); //this is the ×BREAK×DOWN× from above
+    console.log(p); //will show you the element
+    console.dir(p); //will show you all the attributes of the element
 
     // Grouping together
 
